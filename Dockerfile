@@ -13,5 +13,5 @@ RUN tar zfx zdaemon-latest.tgz --strip 1
 
 RUN mkdir wads
 
-CMD ./zserv -waddir wads -iwad doom.wad -cfg zserv.cfg -port 10701 -ip 192.168.0.146
+CMD ./zserv -waddir wads -cfg zserv.cfg -port 10701 -ip 192.168.0.146
 
