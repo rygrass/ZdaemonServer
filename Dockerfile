@@ -1,13 +1,16 @@
-FROM base
 
-RUN dpkg --add-architecture i386 &&  apt-get update && apt-get install -y libc6-i386 libstdc++6:i386
+FROM ubuntu:latest
 
-ADD zserv*linux26.tgz /
-RUN mkdir /zdaemon && mv /zserv*/* /zdaemon/ && chmod +x /zdaemon/zserv
+RUN dpkg --add-architecture i386 &&  apt-get update && apt-get install -y libc6-i386 libstdc++6:i386 wget tar
+
 WORKDIR /zdaemon
 
-ADD wads/* /zdaemon/
-ADD start-* zserv.cfg /zdaemon/
+# Download
+RUN wget -O zdaemon-latest.tgz http://downloads.zdaemon.org/zserv11012_linux26.tgz
 
-CMD ["./zserv.sh"]
+# Extract
+RUN tar zfx zdaemon-latest.tgz --strip 1
+
+
+CMD ./zserv -waddir wads -cfg zserv.cfg -port 10701 -ip 192.168.0.146
 
