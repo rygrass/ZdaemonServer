@@ -15,5 +15,5 @@ RUN mkdir wads
 
 RUN mkdir cfg
 
-CMD ./zserv -waddir /wads -cfg /cfg/zserv.cfg -port 10701 -ip 192.168.0.146
+CMD ./zserv -waddir /wads -cfg /cfg/zserv.cfg -port 10666
 
