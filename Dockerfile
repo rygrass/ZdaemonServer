@@ -11,6 +11,7 @@ RUN wget -O zdaemon-latest.tgz http://downloads.zdaemon.org/zserv11013_linux26.t
 # Extract
 RUN tar zfx zdaemon-latest.tgz --strip 1
 
+RUN mkdir wads
 
 CMD ./zserv -waddir wads -iwad doom.wad -cfg zserv.cfg -port 10701 -ip 192.168.0.146
 
