@@ -31,4 +31,4 @@ $(env | grep '^CVAR_' | sed "s/^CVAR_/set /" | tr '=' ' ')
 EOF
 
 
-exec ./zserv -waddir wads -cfg zserv.cfg -port 10701 -ip 192.168.0.146
+exec ./zserv -waddir wads -cfg zserv.cfg -port 10701 -ip 192.168.0.146 -iwad doom1.wad
