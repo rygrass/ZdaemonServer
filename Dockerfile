@@ -19,5 +19,5 @@ RUN mkdir wads
 
 RUN mkdir cfg
 
-CMD ./zserv -waddir /wads -cfg /cfg/zserv.cfg 
+CMD ./zserv -waddir /wads -cfg /cfg/zserv.cfg -port 10666
 
