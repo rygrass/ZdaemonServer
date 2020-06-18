@@ -1,6 +1,6 @@
 
 
-FROM ubuntu:latest
+FROM debian:latest
 
 
 RUN dpkg --add-architecture i386
