@@ -11,9 +11,9 @@ RUN apt-get install libc6-i386 libstdc++6:i386
 
 RUN apt-get install -y wget
 
-mkdir zdaemon
+RUN mkdir zdaemon
 
-cd zdaemon
+RUN cd zdaemon
 
 RUN wget -O zdaemon-latest.tgz http://downloads.zdaemon.org/zserv11013_linux26.tgz
 
