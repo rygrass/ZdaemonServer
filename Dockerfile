@@ -15,7 +15,7 @@ RUN mkdir zdaemon
 
 RUN cd zdaemon
 
-RUN wget -O zdaemon-latest.tgz http://downloads.zdaemon.org/zserv11013_linux26.tgz
+RUN wget -O zdaemon-latest.tgz http://downloads.zdaemon.org/zserv11014_win32.7z
 
 RUN tar zfx zdaemon-latest.tgz --strip 1
 
